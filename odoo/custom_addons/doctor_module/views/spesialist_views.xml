@@ -1,0 +1,33 @@
+<odoo>
+    <record id="action_spesialist_list" model="ir.actions.act_window">
+        <field name="name">Spesialist List</field>
+        <field name="res_model">doctor.spesialist</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_spesialist_form" model="ir.ui.view">
+        <field name="name">spesialist.form</field>
+        <field name="model">doctor.spesialist</field>
+        <field name="arch" type="xml">
+            <form string="Spesialist Form">
+                <group>
+                    <field name="code_spesialis"/>
+                    <field name="nama_spesialis"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_spesialist_tree" model="ir.ui.view">
+        <field name="name">spesialist.tree</field>
+        <field name="model">doctor.spesialist</field>
+        <field name="arch" type="xml">
+            <tree string="Spesialist List">
+                <field name="code_spesialis"/>
+                <field name="nama_spesialis"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_spesialist" name="Spesialist" parent="menu_configuration" action="action_spesialist_list" sequence="20"/>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_doctor_model,access.doctor.model,model_doctor_model,base.group_user,1,1,1,1
+access_doctor_spesialist,access.doctor.spesialist,model_doctor_spesialist,base.group_user,1,1,1,1
+access_master_insurance,access.master.insurance,model_master_insurance,base.group_user,1,1,1,1

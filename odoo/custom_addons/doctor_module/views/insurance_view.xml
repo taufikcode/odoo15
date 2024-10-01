@@ -1,0 +1,34 @@
+<odoo>
+    <record id="action_insurance_list" model="ir.actions.act_window">
+        <field name="name">Insurance List</field>
+        <field name="res_model">master.insurance</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_insurance_form" model="ir.ui.view">
+        <field name="name">insurance.form</field>
+        <field name="model">master.insurance</field>
+        <field name="arch" type="xml">
+            <form string="Insurance Form">
+                <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_insurance_tree" model="ir.ui.view">
+        <field name="name">insurance.tree</field>
+        <field name="model">master.insurance</field>
+        <field name="arch" type="xml">
+            <tree string="Insurance List">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_configuration" name="Configuration" parent="menu_doctor_root" sequence="100"/>
+    <menuitem id="menu_insurance" name="Insurance" parent="menu_configuration" action="action_insurance_list" sequence="10"/>
+</odoo>
